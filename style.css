@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Righteous', cursive;
+    font-size: 10px;
+}
+
+.giris-sayfasi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.basamak-degerleri{
+    width: 40rem;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px solid #222121;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.basamak-degerleri> input{
+    width: 40px;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+h4{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.dort-islem-secim{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    
+}
+
+.dort-islem-secim > input{
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#oyun-baslat{
+    width: 300px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    border: 5px solid #222121;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+#oyun-baslat:hover{
+    background-color: rgb(130, 186, 83);
+}
+
+.oyun-sayfasi{
+    font-size: 2rem;
+    position: relative;
+    display: none;
+    
+    
+}
+
+#geri-don{
+    width: 200px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    border: 5px solid #222121;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 1;
+    background: none;
+}
+
+#geri-don:hover{
+    background-color: rgb(130, 186, 83);
+}
+
+.soru-cevap-main{
+    width: 200px;
+    border: 5px solid #222121;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    left:10px;
+    top: 60px;
+    z-index: 1;
+}
+
+#cevap-input{
+    width: 100px;
+    height: 50px;
+    font-size: 1.5rem;
+    border-style: none;
+    opacity: 0.8;
+}
+
+#cevap-input:focus{
+   outline: none;
+}
+
+
+.oyun-table{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, rgb(99, 116, 212) 0%, rgb(108, 150, 218) 50%, rgb(69, 188, 252) 100%);
+}
+
+#myRoad{
+    width: 60vw;
+    
+}
+
+#myCar{
+    width: 10vw;
+    transform: rotateY(180deg);
+    position: absolute;
+    left:880px;
+    bottom: 360px;
+    transition: all 2s ease;
+    
+}
+
+@media screen and (max-width:896px) {
+    #myCar{
+        width: 5vw;
+        transform: rotateY(180deg);
+        position: absolute;
+        left:480px;
+        bottom: 150px;
+        transition: all 2s ease;
+        
+    }
+    #myRoad{
+        width: 40vw;
+        
+    }
+}

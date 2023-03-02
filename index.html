@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Mini Game</title>
+</head>
+
+<body>
+
+    <div class="giris-sayfasi">
+        <div class="basamak-degerleri">
+            <label for="ilk-sayi">İlk Sayı İçin Basamak Değerini Girin</label>
+            <input type="text" name="" id="ilk-sayi">
+            <label for="ikinci-sayi">İkinci Sayı İçin Basamak Değerini Girin</label>
+            <input type="text" name="" id="ikinci-sayi">
+        </div>
+        <h4>Hangi İşlemi Yapacağınızı Seçin</h4>
+        <div class="dort-islem-secim">
+            <label for="topla">Toplama</label>
+            <input type="checkbox" name="" id="topla">
+            <label for="cikar">Çıkarma</label>
+            <input type="checkbox" name="" id="cikar">
+            <label for="carp">Çarpma</label>
+            <input type="checkbox" name="" id="carp">
+            <label for="bolme">Bölme</label>
+            <input type="checkbox" name="" id="bolme">
+        </div>
+        <button type="button" id="oyun-baslat" onclick="baslatFunc()">Oyunu Başlat</button>
+    </div>
+
+    <div class="oyun-sayfasi">
+        <button id="geri-don">Geri Dön</button>
+        <div class="soru-cevap-main">
+            <div class="soru-alani">
+                <span id="num1">-</span>
+                <span id="islem-sembol">+</span>
+                <span id="num2">-</span>
+                <span>=?</span>
+            </div>
+            <input type="text" id="cevap-input" placeholder="Cevap">
+        </div>
+        <div class="oyun-table">
+            <img src="./img/newroad.png" alt="" id="myRoad">
+            <img src="./img/car.png" alt="" id="myCar">
+        </div>
+    </div>
+
+
+    <script src="./custom.js"></script>
+</body>
+
+</html>
