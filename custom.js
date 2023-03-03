@@ -291,7 +291,6 @@ function baslatFunc() {
 }
 
 
-
 geriDonBtn.addEventListener("click", () => {
     girisSayfasi.style.display = "flex";
     oyunSayfasi.style.display = "none";
