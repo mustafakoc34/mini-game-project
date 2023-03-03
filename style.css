@@ -1,38 +1,38 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-body{
+body {
     font-family: 'Righteous', cursive;
     font-size: 10px;
 }
 
-.giris-sayfasi{
+.giris-sayfasi {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.basamak-degerleri{
+.basamak-degerleri {
     width: 100%;
     display: flex;
     padding: 30px;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(90deg, #6e6eec 30%, #f07979 100%);
+    background: linear-gradient(90deg, #6e6eec 30%, #f07979 100%);
     border-radius: 10px;
     font-size: 1.2rem;
 }
 
-.basamak-degerleri div{
+.basamak-degerleri div {
     display: flex;
     flex-direction: row;
-    align-items: center;  
+    align-items: center;
 }
 
-.basamak-degerleri > div > input{
+.basamak-degerleri>div>input {
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -42,7 +42,7 @@ body{
     text-align: center;
 }
 
-h4{
+h4 {
     font-size: 1.5rem;
     letter-spacing: 2px;
     margin-top: 20px;
@@ -51,7 +51,7 @@ h4{
     text-align: center;
 }
 
-.dort-islem-secim{
+.dort-islem-secim {
     font-size: 1.2rem;
     letter-spacing: 1px;
     display: flex;
@@ -60,65 +60,55 @@ h4{
     text-transform: uppercase;
 }
 
-.dort-islem-secim div{
+.dort-islem-secim div {
     width: 50%;
     display: flex;
     justify-content: space-between;
 }
 
-.dort-islem-secim >div> input{
+.dort-islem-secim>div>input {
     width: 40px;
     height: 20px;
     border-radius: 5px;
     margin-right: 10px;
     font-size: 1.6rem;
     text-align: center;
+    cursor: pointer;
 }
 
-/* #oyun-baslat{
-    width: 300px;
-    border-radius: 10px;
-    font-size: 1.5rem;
-   
-    margin-top: 10px;
-    text-transform: uppercase;
-} */
-
-         
 .btn-grad {
-    background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
+    background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
     margin: 10px;
     padding: 15px 45px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: white;            
+    color: white;
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
-  }
+}
 
-  .btn-grad:hover {
-    background-position: right center; /* change the direction of the change here */
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
-  }
- 
+    cursor: pointer;
+}
 
-
-
-.oyun-sayfasi{
+.oyun-sayfasi {
     font-size: 2rem;
     position: relative;
     display: none;
 }
 
-#geri-don{
+#geri-don {
     width: 200px;
     border-radius: 10px;
     font-size: 1.5rem;
-    border: 5px solid #222121;
+    border: 2px solid #222121;
     margin-top: 10px;
     position: absolute;
     top: 0;
@@ -127,34 +117,34 @@ h4{
     background: none;
 }
 
-#geri-don:hover{
+#geri-don:hover {
     background-color: rgb(130, 186, 83);
 }
 
-.soru-cevap-main{
+.soru-cevap-main {
     /* width: 200px; */
     /* border: 5px solid #222121; */
     border-radius: 10px;
     text-align: center;
     padding: 10px;
     position: absolute;
-    left:10px;
+    left: 10px;
     top: 60px;
     z-index: 1;
 }
 
-.input-btn-grup{
+.input-btn-grup {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.soru-cevap-main >.input-btn-grup> button{
+.soru-cevap-main>.input-btn-grup>button {
     width: 100px;
     height: 50px;
 }
 
-#cevap-input{
+#cevap-input {
     width: 100px;
     height: 50px;
     font-size: 1.5rem;
@@ -162,49 +152,51 @@ h4{
     opacity: 0.8;
 }
 
-#cevap-input:focus{
-   outline: none;
+#cevap-input:focus {
+    outline: none;
 }
 
-
-.oyun-table{
+.oyun-table {
     position: relative;
     display: flex;
     justify-content: center;
     background: linear-gradient(0deg, rgb(99, 116, 212) 0%, rgb(108, 150, 218) 50%, rgb(69, 188, 252) 100%);
 }
 
-#myRoad{
+#myRoad {
     width: 60vw;
 }
 
-#myCar{
+#myCar {
     width: 10vw;
     transform: rotateY(180deg);
     position: absolute;
-    left:880px;
+    left: 880px;
     bottom: 360px;
     transition: all 2s ease;
 }
 
 @media screen and (max-width:896px) {
-    .oyun-sayfasi{
+    .oyun-sayfasi {
         height: 100vh;
         background: linear-gradient(0deg, rgb(99, 116, 212) 0%, rgb(108, 150, 218) 50%, rgb(69, 188, 252) 100%);
     }
-    #myCar{
+
+    #myCar {
         width: 20vw;
         transform: rotateY(180deg);
         position: absolute;
-        left:220px;
+        left: 220px;
         bottom: 120px;
         transition: all 2s ease;
     }
-    #myRoad{
+
+    #myRoad {
         margin-top: 50px;
         width: 90vw;
     }
-    .soru-cevap-main{
+
+    .soru-cevap-main {
         width: 360px;
         margin-top: 66%;
         display: flex;
@@ -214,19 +206,16 @@ h4{
         padding: 10px;
         z-index: 1;
     }
-    .input-btn-grup{
+
+    .input-btn-grup {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
 
-    .soru-cevap-main >.input-btn-grup> button{
+    .soru-cevap-main>.input-btn-grup>button {
         width: 100px;
         height: 50px;
     }
-    
+
 }
-
-         
-
- 
