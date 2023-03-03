@@ -75,18 +75,38 @@ h4{
     text-align: center;
 }
 
-#oyun-baslat{
+/* #oyun-baslat{
     width: 300px;
     border-radius: 10px;
     font-size: 1.5rem;
-    border: 5px solid #222121;
+   
     margin-top: 10px;
     text-transform: uppercase;
-}
+} */
 
-#oyun-baslat:hover{
-    background-color: rgb(130, 186, 83);
-}
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+
+
 
 .oyun-sayfasi{
     font-size: 2rem;
@@ -206,3 +226,7 @@ h4{
     }
     
 }
+
+         
+
+ 
