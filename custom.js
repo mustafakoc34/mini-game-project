@@ -61,9 +61,6 @@ function baslatFunc() {
             num2.innerHTML = randomNumber2;
             islemSembol.innerHTML = "+";
             let toplamSonuc = randomNumber1 + randomNumber2;
-
-            
-
             const keydownHandler = (e) => {
                 if (e.key == "Enter") {
                     if (toplamSonuc == Number(cevapInput.value)) {
@@ -111,60 +108,64 @@ function baslatFunc() {
         }
         oyunSayfasi.style.display = "block";
         girisSayfasi.style.display = "none";
-    } else if (cikarCheck) {
-        if (Number(ilkSayi.value) == 1 && Number(ikinciSayi.value) == 1) {
-            let randomNumber1 = Math.floor(Math.random() * 9);
-            let randomNumber2 = Math.floor(Math.random() * 9);
-            cevapInput.value = null;
-            num1.innerHTML = randomNumber1;
-            num2.innerHTML = randomNumber2;
-            islemSembol.innerHTML = "-";
-            let toplamSonuc = randomNumber1 - randomNumber2;
+    } 
+    //if (cikarCheck) {
+    //     if (Number(ilkSayi.value) == 1 && Number(ikinciSayi.value) == 1) {
+    //         let randomNumber1 = Math.floor(Math.random() * 9);
+    //         let randomNumber2 = Math.floor(Math.random() * 9);
+    //         cevapInput.value = null;
+    //         num1.innerHTML = randomNumber1;
+    //         num2.innerHTML = randomNumber2;
+    //         islemSembol.innerHTML = "-";
+    //         let toplamSonuc = randomNumber1 - randomNumber2;
 
-            const keydownHandler = (e) => {
-                if (e.key == "Enter") {
-                    if (toplamSonuc == Number(cevapInput.value)) {
-                        console.log("doğru cevap");
-                        carPositionLeft -= 30;
-                        carPositionRight -= 20;
-                        myCar.style.left = `${carPositionLeft}px`
-                        myCar.style.bottom = `${carPositionRight}px`
-                    } else {
-                        console.log("yanlış cevap");
-                    }
-                    cevapInput.removeEventListener("keydown", keydownHandler);
-                    return baslatFunc();
-                }
-            }
-            cevapInput.addEventListener("keydown", keydownHandler);
-        } else if (Number(ilkSayi.value) == 2 && Number(ikinciSayi.value) == 2) {
-            let randomNumber1 = Math.floor(Math.random() * 89 + 10);
-            let randomNumber2 = Math.floor(Math.random() * 89 + 10);
-            cevapInput.value = null;
-            num1.innerHTML = randomNumber1;
-            num2.innerHTML = randomNumber2;
-            islemSembol.innerHTML = "-";
-            let toplamSonuc = randomNumber1 - randomNumber2;
-            const keydownHandler = (e) => {
-                if (e.key == "Enter") {
-                    if (toplamSonuc == Number(cevapInput.value)) {
-                        console.log("doğru cevap");
-                        carPositionLeft -= 30;
-                        carPositionRight -= 20;
-                        myCar.style.left = `${carPositionLeft}px`
-                        myCar.style.bottom = `${carPositionRight}px`
-                    } else {
-                        console.log("yanlış cevap");
-                    }
-                    cevapInput.removeEventListener("keydown", keydownHandler);
-                    return baslatFunc();
-                }
-            }
-            cevapInput.addEventListener("keydown", keydownHandler);
+    //         const keydownHandler = (e) => {
+    //             if (e.key == "Enter") {
+    //                 if (toplamSonuc == Number(cevapInput.value)) {
+    //                     console.log("doğru cevap");
+    //                     carPositionLeft -= 30;
+    //                     carPositionRight -= 20;
+    //                     myCar.style.left = `${carPositionLeft}px`
+    //                     myCar.style.bottom = `${carPositionRight}px`
+    //                 } else {
+    //                     console.log("yanlış cevap");
+    //                 }
+    //                 cevapInput.removeEventListener("keydown", keydownHandler);
+    //                 return baslatFunc();
+    //             }
+    //         }
+    //         cevapInput.addEventListener("keydown", keydownHandler);
+    //     } else if (Number(ilkSayi.value) == 2 && Number(ikinciSayi.value) == 2) {
+    //         let randomNumber1 = Math.floor(Math.random() * 89 + 10);
+    //         let randomNumber2 = Math.floor(Math.random() * 89 + 10);
+    //         cevapInput.value = null;
+    //         num1.innerHTML = randomNumber1;
+    //         num2.innerHTML = randomNumber2;
+    //         islemSembol.innerHTML = "-";
+    //         let toplamSonuc = randomNumber1 - randomNumber2;
+    //         const keydownHandler = (e) => {
+    //             if (e.key == "Enter") {
+    //                 if (toplamSonuc == Number(cevapInput.value)) {
+    //                     console.log("doğru cevap");
+    //                     carPositionLeft -= 30;
+    //                     carPositionRight -= 20;
+    //                     myCar.style.left = `${carPositionLeft}px`
+    //                     myCar.style.bottom = `${carPositionRight}px`
+    //                 } else {
+    //                     console.log("yanlış cevap");
+    //                 }
+    //                 cevapInput.removeEventListener("keydown", keydownHandler);
+    //                 return baslatFunc();
+    //             }
+    //         }
+    //         cevapInput.addEventListener("keydown", keydownHandler);
             
-        }
-        oyunSayfasi.style.display = "block";
-        girisSayfasi.style.display = "none";
+    //     }
+    //     oyunSayfasi.style.display = "block";
+    //     girisSayfasi.style.display = "none";
+    // } 
+    else{
+        alert("bir seçim yapmadınız..")
     }
 }
 

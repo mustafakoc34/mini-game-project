@@ -15,7 +15,7 @@ body{
     
 }
 .basamak-degerleri{
-    width: 40rem;
+    width: 100%;
     display: flex;
     padding: 30px;
     align-items: center;
@@ -38,18 +38,29 @@ body{
 h4{
     font-size: 1.5rem;
     letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
 }
 
 .dort-islem-secim{
     font-size: 1.2rem;
     letter-spacing: 1px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-transform: uppercase;
     
 }
 
-.dort-islem-secim > input{
+.dort-islem-secim div{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dort-islem-secim >div> input{
     width: 40px;
     height: 20px;
     border-radius: 5px;
@@ -148,13 +159,15 @@ h4{
         width: 5vw;
         transform: rotateY(180deg);
         position: absolute;
-        left:480px;
-        bottom: 150px;
+        left:0px;
+        bottom: 0px;
         transition: all 2s ease;
         
     }
     #myRoad{
-        width: 40vw;
+        margin-top: 300px;
+        width: 70vw;
+        
         
     }
 }
