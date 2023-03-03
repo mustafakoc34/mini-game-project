@@ -63,7 +63,7 @@ checkboxes.forEach(function (checkbox) {
                         num2.innerHTML = randomNumber2;
                         toplamSonuc = randomNumber1 / randomNumber2;
                     }
-                    const keydownHandler = (e) => {
+                    function keydownHandler(e){
                         if (e.key == "Enter") {
                             if (toplamSonuc == Number(cevapInput.value)) {
                                 console.log("doğru cevap");
@@ -104,7 +104,7 @@ checkboxes.forEach(function (checkbox) {
                         num2.innerHTML = randomNumber2;
                         toplamSonuc = randomNumber1 / randomNumber2;
                     }
-                    const keydownHandler = (e) => {
+                    function keydownHandler(e){
                         if (e.key == "Enter") {
                             if (toplamSonuc == Number(cevapInput.value)) {
                                 console.log("doğru cevap");
