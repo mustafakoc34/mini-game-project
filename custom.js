@@ -23,8 +23,8 @@ console.log(carPositionLeft);
 console.log(carPositionRight);
 function carPosition(genislik) {
     if (genislik.matches) {
-        carPositionLeft = 480;
-        carPositionRight = 150;
+        carPositionLeft = 220;
+        carPositionRight = 120;
     } else {
         carPositionLeft = 880;
         carPositionRight = 360;
