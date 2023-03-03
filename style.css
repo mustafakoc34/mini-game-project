@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
 }
+
 body{
     font-family: 'Righteous', cursive;
     font-size: 10px;
@@ -11,10 +12,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
-    
+    justify-content: center; 
 }
+
 .basamak-degerleri{
     width: 100%;
     display: flex;
@@ -29,8 +29,7 @@ body{
 .basamak-degerleri div{
     display: flex;
     flex-direction: row;
-    align-items: center;
-   
+    align-items: center;  
 }
 
 .basamak-degerleri > div > input{
@@ -59,7 +58,6 @@ h4{
     flex-direction: column;
     align-items: center;
     text-transform: uppercase;
-    
 }
 
 .dort-islem-secim div{
@@ -94,8 +92,6 @@ h4{
     font-size: 2rem;
     position: relative;
     display: none;
-    
-    
 }
 
 #geri-don{
@@ -116,8 +112,8 @@ h4{
 }
 
 .soru-cevap-main{
-    width: 200px;
-    border: 5px solid #222121;
+    /* width: 200px; */
+    /* border: 5px solid #222121; */
     border-radius: 10px;
     text-align: center;
     padding: 10px;
@@ -125,6 +121,17 @@ h4{
     left:10px;
     top: 60px;
     z-index: 1;
+}
+
+.input-btn-grup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.soru-cevap-main >.input-btn-grup> button{
+    width: 100px;
+    height: 50px;
 }
 
 #cevap-input{
@@ -149,7 +156,6 @@ h4{
 
 #myRoad{
     width: 60vw;
-    
 }
 
 #myCar{
@@ -159,7 +165,6 @@ h4{
     left:880px;
     bottom: 360px;
     transition: all 2s ease;
-    
 }
 
 @media screen and (max-width:896px) {
@@ -174,25 +179,30 @@ h4{
         left:220px;
         bottom: 120px;
         transition: all 2s ease;
-        
     }
     #myRoad{
-        margin-top: 100px;
+        margin-top: 50px;
         width: 90vw;
     }
-    
-
     .soru-cevap-main{
-        width: 200px;
-        margin-top: 80%;
-        margin-left: 20%;
-        
-        border: 5px solid #222121;
-        border-radius: 10px;
+        width: 360px;
+        margin-top: 66%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
         padding: 10px;
-        
         z-index: 1;
+    }
+    .input-btn-grup{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .soru-cevap-main >.input-btn-grup> button{
+        width: 100px;
+        height: 50px;
     }
     
 }
