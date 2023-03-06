@@ -75,9 +75,14 @@ function baslatFunc() {
         toplamSonuc = randomNumber1 * randomNumber2;
     } else if (bolCheck.checked) {
         randomNumber2 = Math.floor(Math.random() * 8 + 1);
-        islemSembol.innerHTML = "/";
-        num2.innerHTML = randomNumber2;
-        toplamSonuc = randomNumber1 / randomNumber2;
+        if(randomNumber1%randomNumber2==0){
+            islemSembol.innerHTML = "/";
+            num2.innerHTML = randomNumber2;
+            toplamSonuc = randomNumber1 / randomNumber2;
+        }else{
+            return baslatFunc();
+
+        }
     }
     function keydownHandler(e) {
         if (e.key == "Enter") {
