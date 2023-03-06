@@ -11,20 +11,23 @@ const geriDonBtn = document.getElementById("geri-don");
 const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
 const islemSembol = document.getElementById("islem-sembol");
+const inputBtnGrup = document.querySelector(".input-btn-grup");
 const cevapInput = document.getElementById("cevap-input");
 const myCar = document.getElementById("myCar");
+const soruCevapDOM = document.querySelector(".soru-cevap-main");
+const geriSayimDOM = document.querySelector("#geri-sayim-zaman");
 
 
 let genislik = window.matchMedia("(max-width: 896px)")
 let carPositionLeft;
-let carPositionRight;
+let carPositionBottom;
 function carPosition(genislik) {
     if (genislik.matches) {
         carPositionLeft = 220;
-        carPositionRight = 120;
+        carPositionBottom = 120;
     } else {
         carPositionLeft = 880;
-        carPositionRight = 360;
+        carPositionBottom = 360;
     }
 }
 carPosition(genislik);
@@ -39,10 +42,11 @@ checkboxes.forEach(function (checkbox) {
                 checkbox.checked = false;
             });
             this.checked = true;
-            oyunBaslatBtn.addEventListener("click", baslatFunc)
             let randomNumber1;
             let randomNumber2;
+            oyunBaslatBtn.addEventListener("click", baslatFunc)
             function baslatFunc() {
+
                 if (Number(ilkSayi.value) == 1 && Number(ikinciSayi.value) == 1) {
                     randomNumber1 = Math.floor(Math.random() * 9);
                     randomNumber2 = Math.floor(Math.random() * 9);
@@ -75,9 +79,14 @@ checkboxes.forEach(function (checkbox) {
                         if (toplamSonuc == Number(cevapInput.value)) {
                             console.log("doğru cevap");
                             carPositionLeft -= 30;
-                            carPositionRight -= 20;
+                            carPositionBottom -= 20;
                             myCar.style.left = `${carPositionLeft}px`
-                            myCar.style.bottom = `${carPositionRight}px`
+                            myCar.style.bottom = `${carPositionBottom}px`
+                            if (carPositionLeft == 460 && carPositionBottom == 80) {
+                                soruCevapDOM.innerHTML = "Tebrikler..";
+                            } else if (carPositionLeft == 70 && carPositionBottom == 20) {
+                                soruCevapDOM.innerHTML = "Tebrikler..";
+                            }
                         } else {
                             console.log("yanlış cevap");
                         }
@@ -86,11 +95,19 @@ checkboxes.forEach(function (checkbox) {
                     }
                 }
                 cevapInput.addEventListener("keydown", keydownHandler);
-
                 oyunSayfasi.style.display = "block";
                 girisSayfasi.style.display = "none";
             }
-
+            let saniye = 20;
+            let geriSayim = setInterval(geriSayimFunc, 1000);
+            function geriSayimFunc() {
+                saniye--
+                geriSayimDOM.innerHTML = saniye;
+                if (saniye == 0) {
+                    inputBtnGrup.innerText = "Süre Doldu.."
+                    clearInterval(geriSayim)
+                }
+            }
         } else {
             this.checked = false;
         }
