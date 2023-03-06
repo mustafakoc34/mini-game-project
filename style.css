@@ -4,8 +4,10 @@
 }
 
 body {
-    font-family: 'Righteous', cursive;
+    font-family: 'Bangers', cursive;
+    /* font-family: 'Chakra Petch', sans-serif; */
     font-size: 10px;
+    letter-spacing: 1px;
 }
 
 .giris-sayfasi {
@@ -62,6 +64,7 @@ h4 {
 
 .dort-islem-secim div {
     width: 50%;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -71,17 +74,35 @@ h4 {
     height: 20px;
     border-radius: 5px;
     margin-right: 10px;
-    font-size: 1.6rem;
     text-align: center;
     cursor: pointer;
 }
+
+.zaman-secim{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.zaman-secim input{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
 
 .btn-grad {
     background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
     margin: 10px;
     padding: 15px 45px;
     text-align: center;
-    text-transform: uppercase;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    /* text-transform: uppercase; */
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
@@ -106,7 +127,10 @@ h4 {
 
 #geri-don {
     width: 200px;
+    height: 40px;
     border-radius: 10px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
     font-size: 1.5rem;
     border: 2px solid #222121;
     margin-top: 10px;
@@ -173,7 +197,7 @@ h4 {
     position: absolute;
     left: 880px;
     bottom: 360px;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 @media screen and (max-width:896px) {
@@ -188,7 +212,7 @@ h4 {
         position: absolute;
         left: 220px;
         bottom: 120px;
-        transition: all 2s ease;
+        transition: all 1s ease;
     }
 
     #myRoad {
