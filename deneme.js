@@ -99,24 +99,32 @@ function baslatFunc() {
             return baslatFunc();
         }
     }
-    cevapInput.addEventListener("keydown", keydownHandler);
-    setTimeout(() => {
-        oyunSayfasi.style.display = "block";
-        girisSayfasi.style.display = "none";
-    }, 700)
+    if(parseInt(timeStartInput.value)<10){
+        alert("10 saniyeden küçük değer girilemez")
+    }else{
+        cevapInput.addEventListener("keydown", keydownHandler);
+        setTimeout(() => {
+            oyunSayfasi.style.display = "block";
+            girisSayfasi.style.display = "none";
+        }, 700)
+    }
 }
 
 oyunBaslatBtn.addEventListener("click", setIntervalFunc)
 function setIntervalFunc() {
     console.log("butona tıklandı")
-    let saniyeGeriBaslangic = parseInt(timeStartInput.value);
-    let geriSayim = setInterval(geriSayimFunc, 1000);
-    function geriSayimFunc() {
-        saniyeGeriBaslangic--
-        geriSayimDOM.innerHTML = `${saniyeGeriBaslangic} sn`;
-        if (saniyeGeriBaslangic == 0) {
-            inputBtnGrup.innerText = "Süre Doldu.."
-            clearInterval(geriSayim)
+    if(parseInt(timeStartInput.value)<10){
+        console.log("10 saniyeden küçük değer girilemez")
+    }else{
+        let saniyeGeriBaslangic = parseInt(timeStartInput.value);
+        let geriSayim = setInterval(geriSayimFunc, 1000);
+        function geriSayimFunc() {
+            saniyeGeriBaslangic--
+            geriSayimDOM.innerHTML = `${saniyeGeriBaslangic} sn`;
+            if (saniyeGeriBaslangic == 0) {
+                inputBtnGrup.innerText = "Süre Doldu.."
+                clearInterval(geriSayim)
+            }
         }
     }
 }
