@@ -104,8 +104,8 @@ function baslatFunc() {
             return baslatFunc();
         }
     }
-    if(parseInt(timeStartInput.value)<10){
-        alert("10 saniyeden küçük değer girilemez")
+    if(parseInt(timeStartInput.value)<10 || timeStartInput.value == "" ){
+        alert("Geçerli bir süre giriniz(En az 10 sn)")
     }else{
         cevapInput.addEventListener("keydown", keydownHandler);
         setTimeout(() => {
@@ -119,7 +119,7 @@ oyunBaslatBtn.addEventListener("click", setIntervalFunc)
 function setIntervalFunc() {
     console.log("butona tıklandı")
     if(parseInt(timeStartInput.value)<10){
-        console.log("10 saniyeden küçük değer girilemez")
+        console.log("Geçerli bir süre giriniz(En az 10 sn)")
     }else{
         let saniyeGeriBaslangic = parseInt(timeStartInput.value);
         let geriSayim = setInterval(geriSayimFunc, 1000);
